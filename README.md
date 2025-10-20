@@ -40,6 +40,39 @@ This repository provides open-access football event data from **Impect**, a lead
    print(df.head())
    ```
 
+## How to Use the Data with [Kloppy](https://kloppy.pysport.org/)
+
+[Kloppy](https://kloppy.pysport.org/) by [PySport](https://pysport.org/) is _the_ industry standard open-source fooball data standardization package. Kloppy simplifies football data processing by offering a single place to [**load**](https://kloppy.pysport.org/user-guide/loading-data/skillcorner/), [**filter**](https://kloppy.pysport.org/user-guide/getting-started/#filtering-data), [**transform**](https://kloppy.pysport.org/user-guide/transformations/coordinates/) and [**export**](https://kloppy.pysport.org/user-guide/exporting-data/) your football data in a standardized way. 
+
+To get started with the open dataset simply,
+ 
+1. **Install Kloppy**
+   ```sh
+   pip install kloppy>=3.18.0
+   ```
+   
+2. **Load the data**
+   ```python
+   from kloppy import impect
+
+   events = impect.load_open_data(match_id=122840)
+   ```
+
+   To load other, non-open data use `impect.load()` instead.
+
+3. **Filter, Transform and Export**
+    ```python
+    df = (
+        events.transform(
+            to_orientation="STATIC_HOME_AWAY"
+        )  # Now, the home team always attacks left to right
+        .filter(lambda event: event.period.id == 1)  # Only keep frames from the first half
+        .to_df(
+            engine="polars"
+        )  # Convert to a Polars DataFrame, or use engine="pandas" for a Pandas DataFrame
+    )
+    ```
+
 ## Data Structure
 
 The dataset is organized as follows:
