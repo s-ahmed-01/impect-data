@@ -42,7 +42,7 @@ This repository provides open-access football event data from **Impect**, a lead
 
 ## How to Use the Data with [Kloppy](https://kloppy.pysport.org/)
 
-[Kloppy](https://kloppy.pysport.org/) by [PySport](https://pysport.org/) is _the_ industry standard open-source fooball data standardization package. Kloppy simplifies football data processing by offering a single place to [**load**](https://kloppy.pysport.org/user-guide/loading-data/skillcorner/), [**filter**](https://kloppy.pysport.org/user-guide/getting-started/#filtering-data), [**transform**](https://kloppy.pysport.org/user-guide/transformations/coordinates/) and [**export**](https://kloppy.pysport.org/user-guide/exporting-data/) your football data in a standardized way. 
+[Kloppy](https://kloppy.pysport.org/) by [PySport](https://pysport.org/) is _the_ industry standard open-source fooball data standardization package. Kloppy simplifies football data processing by offering a single place to [**load**](https://kloppy.pysport.org/user-guide/loading-data/impect/), [**filter**](https://kloppy.pysport.org/user-guide/getting-started/#filtering-data), [**transform**](https://kloppy.pysport.org/user-guide/transformations/coordinates/) and [**export**](https://kloppy.pysport.org/user-guide/exporting-data/) your football data in a standardized way. 
 
 To get started with the open dataset simply,
  
